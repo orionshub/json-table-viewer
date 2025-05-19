@@ -1,7 +1,7 @@
 {
-  "name": "json-table-lvl1",
-  "displayName": "json-table-lvl1",
-  "description": "Converts JSON data (depth 1) to the interactive table",
+  "name": "json-table-viewer",
+  "displayName": "json-table-viewer",
+  "description": "Shows JSON data (depth 1) in an interactive table",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
@@ -14,8 +14,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "json-table-lvl1.helloWorld",
-        "title": "Hello World"
+        "command": "jsonTableViewer.showJsonAsTable",
+        "title": "Show JSON as Table",
+        "category": "JSON Table Viewer"
       }
     ]
   },

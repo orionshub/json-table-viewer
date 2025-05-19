@@ -1,6 +1,6 @@
-# json-table-lvl1 README
+# json-table-viewer README
 
-This is the README for your extension "json-table-lvl1". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "json-table-viewer". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
