@@ -2,10 +2,34 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
-	const disposable = vscode.commands.registerCommand('json-table-viewer.showJsonAsTable', () => {
-		const panel = vscode.window.createWebviewPanel("webview", "React", vscode.ViewColumn.One, {
-            enableScripts: true
-        });
+	const disposable = vscode.commands.registerCommand('jsonTableViewer.showJsonAsTable', () => {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			vscode.window.showErrorMessage("No active editor found.");
+			return;
+		}
+
+		const document = editor.document;
+		if (document.languageId !== "json") {
+			vscode.window.showErrorMessage("Active document is not a JSON file.");
+			return;
+		}
+
+		const jsonText = document.getText();
+		let jsonData;
+		try {
+			jsonData = JSON.parse(jsonText);
+		} catch (error) {
+			vscode.window.showErrorMessage("Invalid JSON data.");
+			return;
+		}
+
+		const panel = vscode.window.createWebviewPanel(
+			"jsonTableViewer",
+			"JSON Table Viewer",
+			vscode.ViewColumn.Beside,
+			{ enableScripts: true }
+		);
 
 		const scriptSrc = panel.webview.asWebviewUri(vscode.Uri.joinPath(context.extensionUri, "react-webview", "dist", "assets", "index.js"));
 		const styleSrc = panel.webview.asWebviewUri(vscode.Uri.joinPath(context.extensionUri, "react-webview", "dist", "assets", "index.css"));
@@ -23,8 +47,12 @@ export function activate(context: vscode.ExtensionContext) {
 				<div id="root"></div>
 				<script src="${scriptSrc}"></script>
 			</body>
-		</html>
-		`;
+		</html>`;
+
+		panel.webview.postMessage({
+			type: "jsonData",
+			data: jsonData
+		});
 	});
 
 	context.subscriptions.push(disposable);
