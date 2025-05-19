@@ -3,6 +3,10 @@
   "displayName": "json-table-viewer",
   "description": "Shows JSON data (depth 1) in an interactive table",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orionshub/json-table-viewer"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
