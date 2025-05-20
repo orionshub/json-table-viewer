@@ -1,6 +1,6 @@
 {
-  "name": "json-table-viewer",
-  "displayName": "json-table-viewer",
+  "name": "JTableau",
+  "displayName": "JSON Table with Functionality Viewer",
   "description": "Shows JSON data (depth 1) in an interactive table",
   "publisher": "geekyorion",
   "version": "0.0.1",
