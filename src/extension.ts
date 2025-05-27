@@ -45,6 +45,10 @@ export function activate(context: vscode.ExtensionContext) {
 			</head>
 			<body>
 				<div id="root"></div>
+				<script>
+					window.INITIAL_DATA = ${JSON.stringify(jsonData)};
+					window.vscode = acquireVsCodeApi();
+				</script>
 				<script src="${scriptSrc}"></script>
 			</body>
 		</html>`;
