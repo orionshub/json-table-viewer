@@ -2,7 +2,7 @@
   "name": "JTableau",
   "displayName": "JSON Table with Functionality Viewer",
   "description": "Shows JSON data (depth 1) in an interactive table",
-  "publisher": "orionshub",
+  "publisher": "geekyorion",
   "version": "1.0.2",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "categories": [
     "Other"
   ],
-  "icon": "assets/icon.png",
+  "icon": "assets/logo.png",
   "keywords": [
     "json",
     "table",

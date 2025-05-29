@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./assets/logo.svg" alt="JTableau Logo" width="50">
+    <img src="./assets/logo.png" alt="JTableau Logo" width="50">
 
 # JTableau
 
