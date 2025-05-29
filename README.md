@@ -3,7 +3,7 @@
 
 # JTableau
 
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 </div>
 
@@ -12,8 +12,6 @@
 
 > **JTableau** lets you view flat JSON data as an interactive table directly inside Visual Studio Code.
 
----
-
 ## Features
 
 - 📊 **Instant Table View:** Convert JSON files (depth 1) into a sortable, filterable table.
@@ -21,8 +19,6 @@
 - ↔️ **Resizable Columns:** Adjust column widths to fit your data.
 - ⚡ **Fast & Lightweight:** Built with React and Tabulator for performance.
 - 🖥️ **Modern UI:** Responsive and user-friendly interface.
-
----
 
 ## Getting Started
 
@@ -40,8 +36,6 @@
    - Resize columns as needed.
    - Sort by clicking on column headers.
 
----
-
 ## Example
 
 Open a JSON file and run the command `ctrl+shift+p` followed by `Show JSON as Table` to see it displayed as a table.
@@ -52,42 +46,25 @@ Open a JSON file and run the command `ctrl+shift+p` followed by `Show JSON as Ta
   ![Screenshot](./assets/extension-result.png)
 
 
----
-
 ## Requirements
 
 - Visual Studio Code `v1.100.0` or higher.
 - JSON files with a flat (depth 1) structure.
-
----
 
 ## Known Issues
 
 - Only supports flat JSON arrays (depth 1).
 - Nested objects/arrays are not displayed in table view.
 
----
-
-## Contributing
-
-Contributions are welcome! Please open issues or pull requests on [GitHub](https://github.com/orionshub/json-table-viewer).
-
----
-
-## License
+## License & Contributing
 
 [MIT](./LICENSE)
 
----
+Contributions are welcome! Please open issues or pull requests on [GitHub](https://github.com/orionshub/json-table-viewer).
 
 ## Credits
 
 - Built with [React](https://react.dev/) and [Tabulator](http://tabulator.info/).
-- Extension by [geekyorion](https://github.com/orionshub).
-
----
-
-![JTableau Logo](./logo.svg)
+- Extension by [geekyorion](https://github.com/geekyorion).
 
 Made with ❤️ by the [JTableau Team](https://github.com/orionshub/json-table-viewer/graphs/contributors)
----
